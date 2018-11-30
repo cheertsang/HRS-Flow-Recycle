@@ -212,6 +212,8 @@ Zarecor, M., Sharma, S., Conneely, J. (2018). High Rate Sedimentation Spring 201
 
 ### ProCoDA Method File
 
+<!-- I wrote in a comment above to specify what ProCoDA stands for, maybe also include a note in the body of your report that more information about ProCoDA can be found in the manual -->
+
 The following is taken directly from the Calibrating PID Control on the [AguaClara Confluence website](https://confluence.cornell.edu/display/AGUACLARA/Calibrating+PID+Control):
 
 > To establish constants for PID control in ProCoDA, follow the procedure summarized below:

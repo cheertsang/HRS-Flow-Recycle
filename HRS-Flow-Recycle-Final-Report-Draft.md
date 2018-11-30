@@ -2,8 +2,12 @@
 #### Justin Conneely and Leena Sen
 #### November 29th, 2018
 
+<!-- Hi guys! I put my comments in the report like this  -Cheer -->
+
 ## Abstract
 Previous High Rate Sedimentation (HRS) teams have observed that at higher upflow velocities, the floc blanket is denser at the top of the recirculator than at the bottom. Given these results, they hypothesized that installing a recycle line from the top of the recirculator to the bottom of the recirculator will improve floc blanket longevity and increase overall reactor performance. The Fall 2018 team has run baseline experiments, fabricated the flow recycle system, and tested various methods to reverse flow.
+
+<!-- "The Fall 2018 team ran baseline experiments, fabricated the flow recycle system, and tested various methods to reverse flow." Keep tense the same throughout sentence. Also, add a couple sentences summarizing your results and final conclusions. -->
 
 ## Introduction
 Sedimentation is the process by which coagulated contaminant particles are removed from water via gravitational settling. In a sedimentation tank, water flows upward as flocs settle downward. Those flocs settle into a "floc blanket" at the bottom of the sedimentation tank. A floc blanket is a fluidized bed of suspended solids with a high rate of collisions. The particles in the floc blanket collide with coagulant particles and other flocs, coming together to form heavier flocs that settle to the basin of the recirculator. These heavier flocs remain in the reactor as part of the floc blanket. This process cleans the water, resulting in a lower effluent NTU (Nephelometric Turbidity Unit, a measure of clarity).
@@ -15,7 +19,11 @@ In the AguaClara lab sedimentation tank setup, a section of PVC piping known as 
 
 Figure 1: Comparison of a sedimentation tank in an AguaClara plant and a sedimentation tank in the AguaClara lab.
 
-The HRS teams aim to design a tank that will yield an effluent of no more than 0.3 NTU while maintaining high upflow velocity. Upflow velocity is the speed at which the particles travel upward through the sedimentation tank. Similarly, the capture velocity is the highest possible settling velocity of a particle that the tube settling will catch. Operating at a higher upflow velocity will allow for greater water processing in a given period of time, which will decrease plant operating costs. However, when operating at a high upflow velocity in lab, the floc blanket is unstable. The floc blanket is dense near the top of the recirculator, but very thin near the bottom. HRS: Flow Recycle hopes to remediate this issue by installing a recycle line. This will allow future teams to continue researching the potential viability of high upflow velocities in AguaClara plants.
+The HRS teams aim to design a tank that will yield an effluent of no more than 0.3 NTU while maintaining high upflow velocity. Upflow velocity is the speed at which the particles travel upward through the sedimentation tank. Similarly, the capture velocity is the highest possible settling velocity of a particle that the tube settling will catch. Operating at a higher upflow velocity will allow for greater water processing in a given period of time, which will decrease plant operating costs. However, when operating at a high upflow velocity in lab, the floc blanket is unstable. The floc blanket is dense near the top of the recirculator, but very thin near the bottom.
+
+<!-- Clarify what implications that an unstable floc blanket will have. Why does it matter than the floc blanket is dense near the top but thin near the bottom? -->
+
+HRS: Flow Recycle hopes to remediate this issue by installing a recycle line. This will allow future teams to continue researching the potential viability of high upflow velocities in AguaClara plants.
 
 ## Literature Review and Previous Work
 Several past researchers have studied the process of sedimentation and the properties floc blankets. Their research gives valuable insight to the Fall 2018 HRS: Flow Recycle Team's results. Culp et al. (1968) researched different angles to find the optimal slope of the tube settlers. Using normal laboratory conditions, a 60 degree angle with respect to the horizontal provided continuous sludge removal while showing effective sedimentation performance. This information was used by the Fall 2017 team when designing the tube settler that is currently being used.
@@ -40,7 +48,13 @@ Figure 2: This is a photograph highlighting the pumps, stocks, and turbidimeters
 
 This system allows the team to model the water treatment process in a lab setting. The influent and effluent turbidimeters record the turbidity of the water entering and leaving the system. In order to run experiments, tap water is mixed with clay water. This is referred to as the influent. The influent is maintained at a constant turbidity of 100 NTU through ProCoDA's PID dosing control.
 
-After exiting the influent turbidimeter, the water enters the flocculator. Upon entering the flocculator, the water is dosed with the coagulant polyaluminum chloride (PACl). The coagulant pump controls how much of the coagulant stock enters the system. After choosing the desired dosage, the team uses a Python markdown file to determine the ideal stock concentration. In conjunction with this, the markdown file returns the required coagulant pump RPM that goes with the desired stock concentration. Once the coagulant is added, the water then passes through the flocculator, which allows for the formation of flocs. Next, the flow  enters the bottom of the sedimentation tank. The effluent that exits through the top of the tube settler then flows through the effluent turbidimeter in order to find the turbidity of the effluent. After exiting the effluent turbidimeter, the water then flows to the wasteline.
+<!-- Maybe add a brief sentence or two on what you're using PID for -->
+
+After exiting the influent turbidimeter, the water enters the flocculator. Upon entering the flocculator, the water is dosed with the coagulant polyaluminum chloride (PACl). The coagulant pump controls how much of the coagulant stock enters the system. After choosing the desired dosage, the team uses a Python markdown file to determine the ideal stock concentration. In conjunction with this, the markdown file returns the required coagulant pump RPM that goes with the desired stock concentration.
+
+<!-- Maybe include a hyperlink to this markdown file you're referring to  -->
+
+Once the coagulant is added, the water then passes through the flocculator, which allows for the formation of flocs. Next, the flow  enters the bottom of the sedimentation tank. The effluent that exits through the top of the tube settler then flows through the effluent turbidimeter in order to find the turbidity of the effluent. After exiting the effluent turbidimeter, the water then flows to the wasteline.
 
 Almost all particle removal subteams use HRS standard apparatus design in conjunction with a the traditional flocculator designed by the High G Flocculation Fall 2017 team. The flocculator in lab mimics the process in an actual AguaClara plant by attaining a sufficient collision potential (G). Values for the different parameters of the flocculator are listed in the following table.
 
@@ -79,28 +93,57 @@ If a floc has a terminal settling velocity that is too low, it will not be captu
 ### Procedure
 
 #### Experiment One
-The aforementioned setup was used to test the effect of introducing a recycle line on floc blanket degradation and effluent turbidity. This was tested first by flushing the system to assure that all coagulant and clay particles were taken out of the system, and then stabilizing influent turbidity at 100 NTU by dosing clay using the PID control in ProCoDa. The HRS Flow Recycle Team tested the system first without a recycle line. This experiment was conducted with a coagulant dosage of 4.2 mg/L, which is the optimal dose as determined by the HRS Spring 2018 Team. Additionally, a constant upflow velocity of 3 mm/s is used(experimentally extrapolated from an RPM of 28.3). Under these same conditions, the effectiveness of a recycle line in increasing longevity of the floc blanket was tested. A recycle line was incorporated into the sedimentation tank by drilling beneath the floc weir and above the elbow created by the floc weir and tube settler, as shown in figure 3.
+The aforementioned setup was used to test the effect of introducing a recycle line on floc blanket degradation and effluent turbidity. This was tested first by flushing the system to assure
+
+<!-- ensure  -->
+
+that all coagulant and clay particles were taken out of the system, and then stabilizing influent turbidity at 100 NTU by dosing clay using the PID control in ProCoDa.
+
+<!-- ProCoDA: include what acronym stands for when you first mention ProCoDA: Process Control and Data Acquisition  -->
+
+The HRS Flow Recycle Team tested the system first without a recycle line. This experiment was conducted with a coagulant dosage of 4.2 mg/L, which is the optimal dose as determined by the HRS Spring 2018 Team. Additionally, a constant upflow velocity of 3 mm/s is used(experimentally extrapolated from an RPM of 28.3).
+
+<!-- It's the other way around, I believe. The upflow velocity was set theoretically to 3 mm/s, and the RPM you got was calculated from the 3 mm/s upflow velocity  -->
+
+Under these same conditions, the effectiveness of a recycle line in increasing longevity of the floc blanket was tested. A recycle line was incorporated into the sedimentation tank by drilling beneath the floc weir and above the elbow created by the floc weir and tube settler, as shown in figure 3.
 
 ![RecycleLine](https://raw.githubusercontent.com/AguaClara/HRS-Flow-Recycle/master/Images/RecycleLine.jpeg)
 Figure 3: This is a photograph of the aforementioned recycle line.
+
+<!-- Broken link for Recycle Line image  -->
 
 Quarter-inch diameter PVC tubing was installed to connect from this location to the bottom of the tube settler after drilling and tapping to create a water-tight seal. Clay and coagulant were then dosed as previously stated, and data from the total ~20 hour experiment included recordings on influent and effluent turbidity, head loss across the flocculator, and the time at with each of the data points were recorded.
 
 ## Results and Analysis
 
 ### Experiment One
-After installation of the recycle line, reactor performance decreased; the effluent turbidity was consistently ~30 NTU higher than the baseline trial for the duration of the test, as is shown in figure 4. It was observed that instead of water flowing back down the recycle line, it instead traveled up both the recirculator and the recycle line in parallel.
+After installation of the recycle line, reactor performance decreased; the effluent turbidity was consistently ~30 NTU higher than the baseline trial for the duration of the test, as is shown in figure 4.
+
+<!-- capitalize Figure 4 -->
+
+It was observed that instead of water flowing back down the recycle line, it instead traveled up both the recirculator and the recycle line in parallel.
+
+<!-- "it instead traveled up both the recirculator and the recycle line in parallel." maybe include a diagram/image to visualize this process  -->
 
 ![ExperimentOne](https://user-images.githubusercontent.com/36204276/47260870-85817380-d491-11e8-8b86-a56ee3dd6943.PNG)
 Figure 4: This figure displays the effluent turbidity of the reactor both with and without flow recycle implemented.
 
+
+<!-- Good technical writing practice to avoid stating "This figure" in the figure caption - it's stating the obvious. Just writing "Effluent turbidity of the reactor both with and without flow recycle implemented" would be fine, maybe adding a sentence noting that the effluent turbidity without flow recycle is higher -->
+
 ### Experiment Two
 Next, a series of experiments was conducted with the recycle line closed for the initial portion of the experiment so that the floc blanket would have time to establish itself before introducing a new factor. It was hypothesized that doing this would reverse the direction of flow, but this yielded similar results to experiment one.
+
+<!-- elaborate a bit on why you came up with this hypothesis -->
+
+effluent turbidity of the reactor both with and without flow recycle implemented
 
 ![ExperimentTwo](https://user-images.githubusercontent.com/36204276/48650719-5b09d400-e9c5-11e8-80e2-6b86610b714e.png)
 Figure 5: This is a graph displaying effluent turbidity with flow recycle.
 
 As you can see above in figure 5, the effluent was relatively with the baseline until the recycle line valve was opened at about three hours in, at which point the effluent increased by roughly 15 NTU.  
+
+<!-- "the effluent was relatively (similar) with the baseline"; consider breaking this sentence up -->
 
 ### Experiment Three
 With consistently poor results, the subteam then hypothesized that the design of the tap at the top of the recycle line was a potential factor affecting these results. To mitigate this, a new tap was installed that was flush with the inside of the tube settler in order to prevent floc buildup, as is shown in figure 6.
@@ -115,7 +158,12 @@ This experiment yielded results that were strikingly similar to the results of o
 Figure 7: This graph compares reactor performance with the tap flush to the recirculator inner diameter to the baseline test without flow recycle. The valve was opened for the recycle line trial at approximately 5.5 hours in.
 
 ## Conclusions
-Based on the above data, the HRS team is unable to conclude whether the recycle line will actually help the longevity of the floc blanket. Results thus far have not been promising, but different approaches and tests are ongoing. The team believes that adjusting the entrance of the tap itself and that incorporating a peristaltic pump to reverse water flow in the favored direction to increase floc blanket longevity could also make the recycle line effective.
+Based on the above data, the HRS team is
+
+<!-- write in past tense -->
+
+
+unable to conclude whether the recycle line will actually help the longevity of the floc blanket. Results thus far have not been promising, but different approaches and tests are ongoing. The team believes that adjusting the entrance of the tap itself and that incorporating a peristaltic pump to reverse water flow in the favored direction to increase floc blanket longevity could also make the recycle line effective.
 
 Experiment 1 involved the installation of a recycle line. This resulted in decreased reactor performance, as the effluent turbidity resulted in a consistent ~30 NTU increase versus the baseline trial throughout the test. Furthermore, water tended to flow up both the recirculator and recycle line rather than down the recycle line, opposing the movement of water along the recirculator.
 
